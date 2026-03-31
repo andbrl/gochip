@@ -180,10 +180,8 @@ func main() {
 
 	beepChan = make(chan int)
 	game = &Game{
-		ui: &ebitenui.UI{Container: root},
-
-		c8: chip8.New(beepChan, *debugModePtr),
-
+		ui:   &ebitenui.UI{Container: root},
+		c8:   chip8.New(beepChan, *debugModePtr),
 		tile: ebiten.NewImage(tileSize, tileSize),
 	}
 
